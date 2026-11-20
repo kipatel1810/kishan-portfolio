@@ -1,7 +1,5 @@
 # Kishankumar Patel: Developer Portfolio
 
-An interactive, responsive portfolio for **Kishankumar Patel**, a software developer in Windsor, ON. He has 2+ years of experience building REST APIs with C#, .NET and SQL Server, and also works on Python data pipelines and distributed systems in C.
-
 The site has a Three.js hero, a draggable 3D skill sphere, a 3D globe, and 3D flip and tilt cards. A small Node.js API serves the content and handles the contact form.
 
 | Part | Stack |
