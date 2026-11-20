@@ -1,0 +1,62 @@
+/* Design tokens. Every color, radius, shadow and font size used in the app is defined here. */
+:root {
+  /* Typography */
+  --font-heading: 'Space Grotesk', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: clamp(1.0625rem, 1rem + 0.25vw, 1.125rem);
+  --text-xl: clamp(1.125rem, 1.05rem + 0.4vw, 1.375rem);
+  --text-2xl: clamp(1.5rem, 1.3rem + 0.9vw, 2rem);
+  --text-3xl: clamp(1.75rem, min(1.5rem + 1.8vw, 1rem + 4vh), 2.75rem);
+  /* Also capped by viewport height so landscape phones keep the hero readable. */
+  --text-display: clamp(2rem, min(1.6rem + 4.2vw, 1rem + 7vh), 4.75rem);
+  --leading-body: 1.6;
+
+  /* Radii */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+
+  /* Layout */
+  --nav-height: 64px;
+
+  /* Light theme (default) */
+  --color-bg: #f7f9fb;
+  --color-surface: #ffffff;
+  --color-surface-2: #eef2f6;
+  --color-text: #0f172a;
+  --color-muted: #475569;
+  --color-border: #d9e1ea;
+  --color-accent: #0f766e;
+  --color-accent-strong: #115e59;
+  --color-accent-soft: rgba(15, 118, 110, 0.1);
+  --color-on-accent: #ffffff;
+  --color-danger: #b42318;
+  --color-success: #067647;
+  --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.06);
+  --shadow-md: 0 8px 24px rgba(15, 23, 42, 0.08);
+  --shadow-lg: 0 24px 48px rgba(15, 23, 42, 0.14);
+  --focus-ring: 0 0 0 3px var(--color-bg), 0 0 0 5px var(--color-accent);
+  color-scheme: light;
+}
+
+[data-theme='dark'] {
+  --color-bg: #0a0f1a;
+  --color-surface: #111827;
+  --color-surface-2: #1a2333;
+  --color-text: #e5e9f0;
+  --color-muted: #9aa7b8;
+  --color-border: #253043;
+  --color-accent: #2dd4bf;
+  --color-accent-strong: #5eead4;
+  --color-accent-soft: rgba(45, 212, 191, 0.12);
+  --color-on-accent: #042f2e;
+  --color-danger: #f97066;
+  --color-success: #47cd89;
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.35);
+  --shadow-lg: 0 24px 48px rgba(0, 0, 0, 0.5);
+  color-scheme: dark;
+}
