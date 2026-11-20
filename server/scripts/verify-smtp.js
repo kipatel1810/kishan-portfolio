@@ -1,5 +1,5 @@
 import nodemailer from 'nodemailer';
-import { loadConfig } from './src/config.js';
+import { loadConfig } from '../src/config.js';
 
 const config = loadConfig();
 const rawPass = (process.env.SMTP_PASS || '').trim();
@@ -54,10 +54,4 @@ if (successfulTransport) {
 } else {
   console.log('\n❌ None of the variations succeeded.');
   console.log('\nThis confirms Google is rejecting the login credentials themselves.');
-  console.log('Key troubleshooting steps:');
-  console.log('1. Account mismatch: Was the App Password created under patelkishan6214@gmail.com instead of ' + config.smtp.user + '?');
-  console.log('   -> Try setting SMTP_USER=patelkishan6214@gmail.com in server/.env to test.');
-  console.log('2. Security Alert: Open Gmail for ' + config.smtp.user + ' and check for any "Sign-in attempt blocked" emails from Google.');
-  console.log('3. 2-Step Verification: Ensure 2-Step Verification is active on ' + config.smtp.user + '.');
-  console.log('4. Generate a brand new 16-character App Password at https://myaccount.google.com/apppasswords while logged in as ' + config.smtp.user + '.');
 }
