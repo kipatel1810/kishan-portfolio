@@ -9,7 +9,7 @@
   "scripts": {
     "start": "node --disable-warning=ExperimentalWarning --env-file-if-exists=.env src/server.js",
     "dev": "node --disable-warning=ExperimentalWarning --env-file-if-exists=.env --watch src/server.js",
-    "test": "node --disable-warning=ExperimentalWarning --test test/",
+    "test": "node --disable-warning=ExperimentalWarning --test 'test/*.test.js'",
     "test-email": "node --disable-warning=ExperimentalWarning --env-file-if-exists=.env scripts/verify-smtp.js"
   },
   "dependencies": {
